@@ -1,0 +1,108 @@
+/*{DECLARING GLOBAL VARIABLES AND STYLES}*/
+.light *{
+  --color-SBL1: #6B0000;
+  --color-SBL2: #872E24;
+  --color-SBL3: #A25146;
+  --color-SBL4: #BB7469;
+  --color-SBL5: #D3978E;
+  --color-SBL6: #EABBB4;
+  --color-SBL7: #FFE0DC;
+  --color-BG: #f4f4f4;
+}
+.dark *{
+  --color-SBL1: #7df9ff;
+  --color-SBL2: #64c7cc;
+  --color-SBL3: #57aeb2;
+  --color-SBL4: #4b9599;
+  --color-SBL5: #326366;
+  --color-SBL6: #254a4c;
+  --color-SBL7: #193133;
+  --color-BG: #0e0e0e;
+}
+.light, .dark, #root{
+  margin: 0;
+  height: 100vh;
+  width: 100vw;
+  background: var(--color-BG);
+}
+/*{SIDE BAR ANIMATION AND STYLIZATION}*/
+.Hamburger{
+  margin: 0;
+  padding: 0;
+  position: absolute;
+}
+.SideBar{
+  position: fixed;
+  height: 100vh;
+  width: 2cm;
+  background-color: var(--color-SBL1);
+}
+.SBBackground{
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: -500px
+}
+#layer1{
+  fill: var(--color-SBL1);
+  transition: Left 0.3s ease 1.5s;
+}
+#layer2{
+  fill: var(--color-SBL2);
+  transition: Left 0.5s ease 1.3s;
+}
+#layer3{
+  fill: var(--color-SBL3);
+  transition: Left 0.7s ease 1.1s;  
+}
+#layer4{
+  fill: var(--color-SBL4);
+  transition: Left 0.9s ease 0.9s;
+}
+#layer5{
+  fill: var(--color-SBL5);
+  transition: Left 1.1s ease 0.7s;
+}
+#layer6{
+  fill: var(--color-SBL6);
+  transition: Left 1.3s ease 0.5s;
+}
+#layer7{
+  fill: var(--color-SBL7);
+  transition: Left 1.5s ease 0.3s;
+}
+.SideBar:hover{
+  .SBBackground{
+    left: 0px;
+  }
+  #layer1{
+    transition: Left 0.3s;
+  }
+  #layer2{
+    transition: Left 0.5s;
+  }
+  #layer3{
+    transition: Left 0.7s;  
+  }
+  #layer4{
+    left: -80px;
+    transition: Left 0.9s;
+  }
+  #layer5{
+    transition: Left 1.1s;
+  }
+  #layer6{
+    transition: Left 1.3s;
+  }
+  #layer7{
+    transition: Left 1.5s;
+  }
+}
+/*{THEME CHANGE SWITCH}*/
+.ThemeToggleContainer{
+  position: absolute;
+  right: 1cm;
+  top: 1cm;
+  width: 1cm;
+  height: 1cm;
+}
